@@ -1,0 +1,61 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.grid-sizer,
+.cat-img {
+  width: 50%;
+}
+
+#cat-container {
+  visibility: visible;
+  
+}
+
+#cat-container.loading {
+  visibility: hidden;
+}
+
+#cat-loader {
+  width: 75px;
+  height: 75px;
+  background-image: url("http://1.bp.blogspot.com/_JzJ2GIbjI5M/SsqDZo7n8fI/AAAAAAAABp8/X9ZoesqfVVo/e8f235de97a632582af2c58337606539_thumb.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+#cat-container.loading + #cat-loader {
+  opacity: 1;
+}
+
+
+@media
+  screen
+  and (min-width: 768px)
+  and (max-resolution: 192dpi) {
+    .grid-sizer,
+    .cat-img {
+      width: 33.333333%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid-sizer,
+  .cat-img {
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .grid-sizer,
+  .cat-img {
+    width: 20%;
+  }
+}
