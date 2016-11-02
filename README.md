@@ -13,6 +13,7 @@ $ mv SAMPLE_CONFIG.js config.js
 ```
 - Open `config.js` in your text editor.
 - Fill in `consumer_key, consumer_secret, token, token_secret` with info from your new Twitter app.
+- Change `host`, `port`, and `hostname` if needed.
 
 ```bash
 $ npm install
