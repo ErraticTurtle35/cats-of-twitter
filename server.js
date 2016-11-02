@@ -12,7 +12,7 @@ app.use(express.static(__dirname + "/public"));
 
 var io = sockio.listen(app.listen(config.port, config.host, function(error) {
   if (error) handleError;
-  console.log(`App running at https://${config.hostname}:${config.port}`)
+  console.log(`App running at ${config.hostname}:${config.port}`)
 }));
 
 function handleError(error) {
@@ -65,7 +65,7 @@ function parseTweet(tweet) {
     var src = /media/.test(media_url) ? media_url : "";
   }
   
-  return !!(hasImg && src && url) ? { id, src, url } : false;
+  return !!(hasImg && !nsfw && src && url) ? { id, src, url } : false;
 }
 
 
@@ -121,7 +121,7 @@ r.connect(config.database).then(function(c) {
       if (item && item.new_val) {
         var lastTimeTweeted = item.old_val &&
                               item.new_val.updatedAt - item.old_val.updatedAt;
-        if (lastTimeTweeted >= 3600000 || !lastTimeTweeted)
+        if (lastTimeTweeted >= 300000 || !lastTimeTweeted)
           io.sockets.emit("photo", item.new_val.imgSrc);
       }
     });

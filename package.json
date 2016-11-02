@@ -1,0 +1,36 @@
+{
+  "name": "cats-of-twitter",
+  "version": "1.0.0",
+  "description": "Node.js/RethinkDB/Socket.io app that uses the Twitter streaming API to show cat pictures in realtime.",
+  "main": "server.js",
+  "dependencies": {
+    "JSONStream": "^1.1.3",
+    "request": "^2.73.0",
+    "event-stream": "^3.3.3",
+    "express": "^4.14.0",
+    "rethinkdb": "^2.3.2",
+    "socket.io": "^1.4.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brettapeters/cats-of-twitter.git"
+  },
+  "keywords": [
+    "realtime",
+    "twitter",
+    "streaming",
+    "cats",
+    "rethinkdb"
+  ],
+  "author": "Brett Peters",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brettapeters/cats-of-twitter/issues"
+  },
+  "homepage": "https://github.com/brettapeters/cats-of-twitter#readme"
+}
